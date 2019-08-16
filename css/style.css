@@ -468,6 +468,7 @@ ol {
   .directors-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .directors-list__item {
@@ -501,21 +502,27 @@ ol {
 .director__name {
   align-items: center;
   display: flex;
-  flex-grow: 1;
   font-size: 18px;
   font-weight: 700;
   justify-content: center;
+  min-height: 43px;
   margin-top: 5px;
   text-align: center;
 }
 
 .director__city {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-align: center;
 }
 
+.director__features {
+  color: #1e1e1e;
+  font-size: 12px;
+}
+
 .director__button-block {
+  margin-bottom: 5px;
   text-align: center;
 }
 

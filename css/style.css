@@ -377,7 +377,7 @@ ol {
   margin-bottom: 30px;
 }
 
-@media(min-width: 980px) {
+@media(min-width: 600px) {
   .prizes-list {
     display: flex;
     flex-wrap: wrap;
@@ -449,6 +449,93 @@ ol {
   padding-right: 60px;
   text-align: center;
   text-decoration: none;
+}
+
+.popup {
+  cursor: auto;
+  display: none;
+  max-width: 1200px !important;
+  padding: 25px !important;
+  width: 100%;
+}
+
+.popup__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media(min-width: 600px) {
+  .directors-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .directors-list__item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 33.333%;
+  }
+}
+
+@media(min-width: 980px) {
+  .directors-list__item {
+    width: 25%;
+  }
+}
+
+.director {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.director img {
+  display: inline-block !important;
+  height: auto;
+  max-width: 70%;
+}
+
+.director__name {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.director__city {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.director__button-block {
+  text-align: center;
+}
+
+.director__button {
+  background-color: #148f5e;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  min-height: 60px;
+  max-width: 210px;
+  min-width: 210px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 
 .videos {}

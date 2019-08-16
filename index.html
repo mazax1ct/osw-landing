@@ -24,6 +24,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="css/slick.css" rel="stylesheet">
+  <link href="css/slick-theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -138,7 +140,57 @@
   <div id="register" class="register section section--grey">
     <div class="register__inner container">
       <h2 class="register__title title">Успейте открыть квалификацию до конца сентября 2019 года!</h2>
-      <p class="register__button-block"><a class="register__button" href="#">Регистрация</a></p>
+      <p class="register__button-block"><a class="register__button" data-fancybox href="#popup">Регистрация</a></p>
+      <div id="popup" class="popup">
+        <button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="Закрыть">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
+            <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z" />
+          </svg>
+        </button>
+        <p class="popup__title title">Выберите лидера</p>
+        <div class="js-directors directors-list">
+          <div class="directors-list__item">
+            <div class="director">
+              <img src="images/director_1.jpg" alt="Валентина Стрельникова">
+              <p class="director__name">Валентина Стрельникова</p>
+              <p class="director__city">г. Пермь</p>
+              <p class="director__button-block"><button class="director__button" type="button">Выбрать лидера</button></p>
+            </div>
+          </div>
+          <div class="directors-list__item">
+            <div class="director">
+              <img src="images/director_3.jpg" alt="Анна Осинкина">
+              <p class="director__name">Анна Осинкина</p>
+              <p class="director__city">г. Нижний Тагил</p>
+              <p class="director__button-block"><button class="director__button" type="button">Выбрать лидера</button></p>
+            </div>
+          </div>
+          <div class="directors-list__item">
+            <div class="director">
+              <img src="images/director_4.jpg" alt="Наталья Коршунова">
+              <p class="director__name">Наталья Коршунова</p>
+              <p class="director__city">г. Ессентуки</p>
+              <p class="director__button-block"><button class="director__button" type="button">Выбрать лидера</button></p>
+            </div>
+          </div>
+          <div class="directors-list__item">
+            <div class="director">
+              <img src="images/director_5.jpg" alt="Екатерина Егорова">
+              <p class="director__name">Екатерина Егорова</p>
+              <p class="director__city">г. Оренбург</p>
+              <p class="director__button-block"><button class="director__button" type="button">Выбрать лидера</button></p>
+            </div>
+          </div>
+          <div class="directors-list__item">
+            <div class="director">
+              <img src="images/director_6.jpg" alt="Ирина Бекасова">
+              <p class="director__name">Ирина Бекасова</p>
+              <p class="director__city">г. Новосибирск</p>
+              <p class="director__button-block"><button class="director__button" type="button">Выбрать лидера</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -204,6 +256,30 @@
 
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      if ($('[data-fancybox]').length) {
+        $('[data-fancybox]').fancybox({
+          touch: false,
+          afterLoad: function(instance, current) {
+            $('.js-directors').slick('setPosition');
+          }
+        });
+      }
+
+      if ($('.js-directors').length && $('body').width() < 980) {
+        $('.js-directors').slick({
+          auto: false,
+          mobileFirst: true,
+          adaptiveHeight: true,
+          infinite: false,
+          dots: false
+        });
+      }
+
+    });
+  </script>
 </body>
 
 </html>

@@ -527,14 +527,16 @@ ol {
 }
 
 .director__button {
+  align-items: center;
   background-color: #148f5e;
   border: none;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
+  justify-content: center;
   min-height: 60px;
   max-width: 210px;
   min-width: 210px;
